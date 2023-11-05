@@ -1,4 +1,5 @@
 from rest_framework import viewsets, permissions
+from rest_framework.response import Response
 
 from contratos.serializers import (EntidadeSerializer, MoradaSerializer,
                                    ContratoSerializer,
@@ -11,11 +12,17 @@ class EntidadeViewSet(viewsets.ModelViewSet):
     serializer_class = EntidadeSerializer
     permission_classes = [permissions.IsAuthenticated]
 
+    def get_paginated_response(self, data):
+        return Response(data)
+
 
 class MoradaViewSet(viewsets.ModelViewSet):
     queryset = Morada.objects.all().order_by('rua')
     serializer_class = MoradaSerializer
     permission_classes = [permissions.IsAuthenticated]
+
+    def get_paginated_response(self, data):
+        return Response(data)
 
 
 class ContratoViewSet(viewsets.ModelViewSet):
@@ -23,8 +30,14 @@ class ContratoViewSet(viewsets.ModelViewSet):
     serializer_class = ContratoSerializer
     permission_classes = [permissions.IsAuthenticated]
 
+    def get_paginated_response(self, data):
+        return Response(data)
+
 
 class EntidadeDeContratoViewSet(viewsets.ModelViewSet):
     queryset = EntidadeDeContrato.objects.all().order_by('entidade')
     serializer_class = EntidadeDeContratoSerializer
     permission_classes = [permissions.IsAuthenticated]
+
+    def get_paginated_response(self, data):
+        return Response(data)
