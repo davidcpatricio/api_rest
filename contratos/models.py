@@ -14,7 +14,7 @@ class Entidade(models.Model):
 class Morada(models.Model):
     entidade = models.ForeignKey(
         Entidade,
-        on_delete=models.SET_NULL,
+        on_delete=models.PROTECT,
         blank=True, null=True
     )
     rua = models.CharField(max_length=100)
@@ -41,11 +41,11 @@ class EntidadeDeContrato(models.Model):
 
     entidade = models.ForeignKey(
         Entidade,
-        on_delete=models.SET_NULL,
+        on_delete=models.PROTECT,
         blank=True, null=True
     )
     contrato = models.ForeignKey(
         Contrato,
-        on_delete=models.SET_NULL,
+        on_delete=models.PROTECT,
         blank=True, null=True
     )

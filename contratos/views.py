@@ -35,9 +35,20 @@ class ContratoViewSet(viewsets.ModelViewSet):
 
 
 class EntidadeDeContratoViewSet(viewsets.ModelViewSet):
-    queryset = EntidadeDeContrato.objects.all().order_by('entidade')
+    # queryset = EntidadeDeContrato.objects.all().order_by('entidade')
     serializer_class = EntidadeDeContratoSerializer
     permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        contrato_id = self.kwargs.get('contrato_id', None)
+        entidade_id = self.kwargs.get('entidade_id', None)
+
+        if contrato_id is not None:
+            return EntidadeDeContrato.objects.filter(contrato=contrato_id)
+        elif entidade_id is not None:
+            return EntidadeDeContrato.objects.filter(entidade=entidade_id)
+        else:
+            return EntidadeDeContrato.objects.all()
 
     def get_paginated_response(self, data):
         return Response(data)
