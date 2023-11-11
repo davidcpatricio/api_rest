@@ -33,6 +33,9 @@ class Contrato(models.Model):
     preco = models.DecimalField(decimal_places=2, max_digits=20)
     descricao = models.TextField(blank=True)
 
+    def __str__(self):
+        return f'Contrato {self.id}'
+
 
 class EntidadeDeContrato(models.Model):
     class Meta:
@@ -49,3 +52,6 @@ class EntidadeDeContrato(models.Model):
         on_delete=models.PROTECT,
         blank=True, null=True
     )
+
+    def __str__(self):
+        return f'Entidade {self.entidade_id} - Contrato {self.contrato_id}'
