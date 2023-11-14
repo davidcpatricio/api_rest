@@ -45,10 +45,11 @@ class EntidadeDeContratoViewSet(viewsets.ModelViewSet):
 
         if contrato_id is not None:
             return EntidadeDeContrato.objects.filter(contrato=contrato_id)
-        elif entidade_id is not None:
+
+        if entidade_id is not None:
             return EntidadeDeContrato.objects.filter(entidade=entidade_id)
-        else:
-            return EntidadeDeContrato.objects.all()
+
+        return EntidadeDeContrato.objects.all()
 
     def get_paginated_response(self, data):
         return Response(data)
