@@ -1,4 +1,5 @@
 from django.contrib import admin
+
 from contratos import models
 
 
@@ -17,7 +18,7 @@ class EntidadeAdmin(admin.ModelAdmin):
 class MoradaAdmin(admin.ModelAdmin):
     list_display = (
         'id', 'entidade', 'rua', 'porta', 'codigo_postal',
-        'localidade', 'ativo_inativo'
+        'localidade', 'ativo'
     )
     ordering = '-id',
     search_fields = (
@@ -32,11 +33,13 @@ class MoradaAdmin(admin.ModelAdmin):
 @admin.register(models.Contrato)
 class ContratoAdmin(admin.ModelAdmin):
     list_display = (
-        'id', 'data_inicio', 'data_fim', 'preco', 'descricao',
+        'id', 'data_inicio', 'data_fim', 'get_preco_formatado', 'descricao',
     )
     ordering = '-id',
-    search_fields = 'id', 'data_inicio', 'data_fim', 'descricao',
-    'localidade',
+    search_fields = (
+        'id', 'data_inicio', 'data_fim', 'descricao',
+        'localidade'
+    )
     list_per_page = 10
     list_max_show_all = 200
     list_editable = 'data_fim', 'descricao',
