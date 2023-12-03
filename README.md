@@ -12,25 +12,33 @@
     ```
     Note: You can replace the last "venv" with anything else you would like to name your virtual environment
 * Then, Git clone this repo to your PC
+  
     ```bash
         $ git clone https://github.com/davidcpatricio/api_rest.git
     ```
 
 * #### Dependencies
     Cd into your the cloned repo:
+  
         ```bash
             $ cd api_rest
         ```
+  
     Create and fire up your virtual environment:
+  
         ```bash
             $ source venv/bin/activate (Mac / Linux)
             $ source venv/Scripts/activate (Windows)
         ```
+  
     Install the dependencies needed to run the app:
+  
         ```bash
             $ pip install -r requirements.txt
         ```
+  
     Make migrations and migrate
+  
         ```bash
             $ python manage.py makemigrations
             $ python manage.py migrate
