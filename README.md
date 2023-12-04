@@ -1,7 +1,8 @@
 # api_rest
 
-* [Django](https://www.djangoproject.com/)
-* [DRF](https://www.django-rest-framework.org/)
+This project was made using the following tools:
+* [Django] 4.2.7 (https://www.djangoproject.com/)
+* [DRF] 3.14.0 (https://www.django-rest-framework.org/)
 
 
 ## Installation
@@ -16,23 +17,22 @@
       $ git clone https://github.com/davidcpatricio/api_rest.git
 
 * #### Dependencies
-    Cd into your the cloned repo:
-  
-      $ cd api_rest
-  
-    Create and fire up your virtual environment:
+    Activate your virtual environment:
   
       $ source venv/bin/activate (Mac / Linux)
       $ source venv/Scripts/activate (Windows)
+
+   Cd into your the cloned repo:
+  
+      $ cd api_rest
   
     Install the dependencies needed to run the app:
   
       $ pip install -r requirements.txt
   
-    Make migrations and migrate
+    In order to visualize the data, you must be a logged in user in Django Admin. You can create a superuser using the following command:
   
-       $ python manage.py makemigrations
-       $ python manage.py migrate
+       $ python manage.py createsuperuser
 
 * #### Run It
     Fire up the server:
