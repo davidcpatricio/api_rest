@@ -42,3 +42,5 @@ This project was made using the following tools:
     You can now access the file api service on your browser by using
   
        http://127.0.0.1:8000/
+
+  In oreder to visualize the data, just log in with your username and password created before.
