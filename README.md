@@ -30,7 +30,7 @@ This project was made using the following tools:
   
       $ pip install -r requirements.txt
   
-    In order to visualize the data, you must be a logged in user in Django Admin. You can create a superuser using the following command:
+    Create a superuser in Django Admin using the following command:
   
        $ python manage.py createsuperuser
 
@@ -43,4 +43,4 @@ This project was made using the following tools:
   
        http://127.0.0.1:8000/
 
-  In oreder to visualize the data, just log in with your username and password created before.
+  In order to visualize the data, just log in with your username and password created before.
