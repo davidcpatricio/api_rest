@@ -14,7 +14,7 @@ This project was made using the following tools:
     Note: You can replace the last "venv" with anything else you would like to name your virtual environment
 * Then, Git clone this repo to your PC
   
-      $ git clone https://github.com/davidcpatricio/api_rest.git
+      $ git clone https://github.com/davidcpatricio/api_rest_django.git
 
 * #### Dependencies
     Activate your virtual environment:
