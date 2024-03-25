@@ -6,7 +6,7 @@ This project was made using the following tools:
 
 
 ## Installation
-* First make sure you have Python globally installed in your computer. If not, you can get python [here](https://www.python.org).
+* First make sure you have Python globally installed in your computer. If not, you can get Python [here](https://www.python.org).
 * After doing this, it is recommended you create a virtual environment for your project.
 
       $ python -m venv venv
