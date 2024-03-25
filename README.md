@@ -20,7 +20,7 @@ This project was made using the following tools:
     Activate your virtual environment:
   
       $ source venv/bin/activate (Mac / Linux)
-      $ source venv/Scripts/activate (Windows)
+      $ source venv\Scripts\activate (Windows)
 
    Cd into your the cloned repo:
   
